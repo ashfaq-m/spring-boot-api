@@ -5,8 +5,6 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import springbootdemo.springbootdemo.Entity.StudentEntity;
 import springbootdemo.springbootdemo.Repository.StudentRepository;
-
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
