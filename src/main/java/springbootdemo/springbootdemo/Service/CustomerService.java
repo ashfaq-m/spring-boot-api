@@ -46,10 +46,6 @@ public class CustomerService {
     }
 
     public boolean isCustomerAvailable(Long customerId){
-        if (customerRepository.existsById(customerId)){
-            return true;
-        }else {
-            return false;
-        }
+        return customerRepository.existsById(customerId);
     }
 }
