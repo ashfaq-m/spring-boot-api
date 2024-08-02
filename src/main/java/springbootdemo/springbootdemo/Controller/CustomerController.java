@@ -21,6 +21,12 @@ public class CustomerController {
         return "Customer saved successfully!";
     }
 
+    @PostMapping("customers")
+    public String saveAllCustomers(@RequestBody List<Customer> customers){
+        customerService.saveAllCustomers(customers);
+        return "All Customers saved successfully!";
+    }
+
     @GetMapping("customers")
     public List<Customer> getAllCustomers(){
         return customerService.getAllCustomers();

@@ -3,7 +3,7 @@ package springbootdemo.springbootdemo.Service;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import springbootdemo.springbootdemo.Entity.Customer;
-import springbootdemo.springbootdemo.Repository.CustomerRepository;
+import springbootdemo.springbootdemo.Repository.customer.CustomerRepository;
 
 import java.util.List;
 import java.util.Optional;
@@ -16,6 +16,10 @@ public class CustomerService {
 
     public void saveCustomer(Customer customer){
         customerRepository.save(customer);
+    }
+
+    public void saveAllCustomers(List<Customer> customers){
+        customerRepository.saveAll(customers);
     }
 
     public Optional<Customer> getCustomer(Long customerId){
