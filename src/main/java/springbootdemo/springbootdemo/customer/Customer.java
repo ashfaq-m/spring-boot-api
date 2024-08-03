@@ -1,4 +1,4 @@
-package springbootdemo.springbootdemo.Entity;
+package springbootdemo.springbootdemo.customer;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

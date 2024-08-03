@@ -25,7 +25,7 @@ import java.util.Map;
 @EnableJpaRepositories(
         entityManagerFactoryRef = "psqlEntityMangerFactoryBean",
         basePackages = {
-                "springbootdemo.springbootdemo.Repository"
+                "springbootdemo.springbootdemo.customer"
         },
         transactionManagerRef = "psqlTransactionManager"
 )
@@ -57,7 +57,7 @@ public class PsqlDataBaseConfig {
         LocalContainerEntityManagerFactoryBean factoryBean =
                 new LocalContainerEntityManagerFactoryBean();
         factoryBean.setDataSource(dataSource());
-        factoryBean.setPackagesToScan("springbootdemo.springbootdemo.Entity");
+        factoryBean.setPackagesToScan("springbootdemo.springbootdemo.customer");
 
         JpaVendorAdapter jpaVendorAdapter = new HibernateJpaVendorAdapter();
         factoryBean.setJpaVendorAdapter(jpaVendorAdapter);
@@ -74,7 +74,7 @@ public class PsqlDataBaseConfig {
 
     // Configuring the platform transaction manager for the psql database
     @Bean(name = "psqlTransactionManager")
-    //@Primary
+    @Primary
     public PlatformTransactionManager platformTransactionManager(){
         JpaTransactionManager jpaTransactionManager =
                 new JpaTransactionManager();

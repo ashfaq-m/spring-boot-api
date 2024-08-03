@@ -2,8 +2,8 @@ package springbootdemo.springbootdemo.Service;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import springbootdemo.springbootdemo.Entity.Customer;
-import springbootdemo.springbootdemo.Repository.customer.CustomerRepository;
+import springbootdemo.springbootdemo.customer.Customer;
+import springbootdemo.springbootdemo.customer.CustomerRepository;
 
 import java.util.List;
 import java.util.Optional;

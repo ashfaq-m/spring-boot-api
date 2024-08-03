@@ -2,7 +2,7 @@ package springbootdemo.springbootdemo.Controller;
 
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import springbootdemo.springbootdemo.Entity.Customer;
+import springbootdemo.springbootdemo.customer.Customer;
 import springbootdemo.springbootdemo.Service.CustomerService;
 
 import java.util.List;

@@ -23,7 +23,7 @@ import java.util.Map;
 @EnableJpaRepositories(
         entityManagerFactoryRef = "mysqlEntityMangerFactoryBean",
         basePackages = {
-                "springbootdemo.springbootdemo.Repository"
+                "springbootdemo.springbootdemo.student"
         },
         transactionManagerRef = "mysqlTransactionManager"
 )
@@ -35,7 +35,7 @@ public class MySQLDatabaseConfig {
 
     // Configuring the data source for the psql database
     @Bean(name = "mysqlDataSource")
-    @Primary
+    //@Primary
     public DataSource dataSource(){
 
         DriverManagerDataSource managerDataSource = new DriverManagerDataSource();
@@ -50,12 +50,12 @@ public class MySQLDatabaseConfig {
 
     // Configuring the entity manager factory for the psql database
     @Bean(name = "mysqlEntityMangerFactoryBean")
-    @Primary
+    //@Primary
     public LocalContainerEntityManagerFactoryBean entityManagerFactoryBean(){
         LocalContainerEntityManagerFactoryBean factoryBean =
                 new LocalContainerEntityManagerFactoryBean();
         factoryBean.setDataSource(dataSource());
-        factoryBean.setPackagesToScan("springbootdemo.springbootdemo.Entity");
+        factoryBean.setPackagesToScan("springbootdemo.springbootdemo.student");
 
         JpaVendorAdapter jpaVendorAdapter = new HibernateJpaVendorAdapter();
         factoryBean.setJpaVendorAdapter(jpaVendorAdapter);
@@ -72,7 +72,7 @@ public class MySQLDatabaseConfig {
 
     // Configuring the platform transaction manager for the psql database
     @Bean(name = "mysqlTransactionManager")
-    @Primary
+    //@Primary
     public PlatformTransactionManager platformTransactionManager(){
         JpaTransactionManager jpaTransactionManager =
                 new JpaTransactionManager();
