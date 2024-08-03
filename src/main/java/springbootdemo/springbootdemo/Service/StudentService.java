@@ -3,8 +3,8 @@ package springbootdemo.springbootdemo.Service;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import springbootdemo.springbootdemo.Entity.StudentEntity;
-import springbootdemo.springbootdemo.Repository.StudentRepository;
+import springbootdemo.springbootdemo.student.StudentEntity;
+import springbootdemo.springbootdemo.student.StudentRepository;
 import java.util.List;
 import java.util.Optional;
 

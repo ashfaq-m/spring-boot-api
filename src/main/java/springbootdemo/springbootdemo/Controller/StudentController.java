@@ -2,8 +2,8 @@ package springbootdemo.springbootdemo.Controller;
 
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import springbootdemo.springbootdemo.Entity.StudentEntity;
-import springbootdemo.springbootdemo.Repository.StudentRepository;
+import springbootdemo.springbootdemo.student.StudentEntity;
+import springbootdemo.springbootdemo.student.StudentRepository;
 import springbootdemo.springbootdemo.Service.StudentService;
 
 import java.util.List;
